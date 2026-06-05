@@ -1,0 +1,30 @@
+{
+  "name": "@freeagentstore/name-parser",
+  "version": "1.0.0",
+  "description": "Parse human names into components — prefix, first, middle, last, suffix. Handles Western, Eastern, Hispanic, Arabic, and mononym formats.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["freeagentstore", "ai", "browser", "heuristic"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FreeAgentStore/name-parser.git"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.7.0"
+  }
+}
